@@ -1,0 +1,352 @@
+export default function ChineseCourseStore() {
+  const courses = [
+    {
+      title: "Chinese Beginner A1",
+      level: "เริ่มต้น",
+      price: "฿1,290",
+      desc: "ปูพื้นฐานพินอิน คำศัพท์ และบทสนทนาใช้ได้จริง",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      title: "HSK 3 Intensive",
+      level: "ระดับกลาง",
+      price: "฿2,490",
+      desc: "เตรียมสอบ HSK พร้อมแบบฝึกหัดและข้อสอบจำลอง",
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      title: "Chinese for Business",
+      level: "ธุรกิจ",
+      price: "฿3,290",
+      desc: "ภาษาจีนสำหรับการทำงาน การประชุม และการค้าขาย",
+      image:
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
+    },
+  ];
+
+  const reviews = [
+    {
+      name: "Mint",
+      text: "เรียนแล้วพูดจีนได้จริง เข้าใจง่ายมาก",
+    },
+    {
+      name: "Best",
+      text: "ครูสอนสนุก มีแบบฝึกหัดครบ เหมาะกับคนเริ่มต้น",
+    },
+    {
+      name: "Fah",
+      text: "สอบ HSK ผ่านหลังเรียนคอร์สนี้ คะแนนดีขึ้นมาก",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-gray-800">
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-red-600">HanYu Academy</h1>
+          </div>
+
+          <nav className="hidden md:flex gap-8 font-medium">
+            <a href="#courses" className="hover:text-red-500">
+              คอร์สเรียน
+            </a>
+            <a href="#about" className="hover:text-red-500">
+              เกี่ยวกับเรา
+            </a>
+            <a href="#reviews" className="hover:text-red-500">
+              รีวิว
+            </a>
+            <a href="#contact" className="hover:text-red-500">
+              ติดต่อ
+            </a>
+          </nav>
+
+          <button className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-xl shadow-lg transition">
+            สมัครเรียน
+          </button>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-red-50 to-orange-100">
+        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-red-600 font-semibold mb-3">
+              เรียนภาษาจีนออนไลน์ แบบเข้าใจง่าย
+            </p>
+
+            <h2 className="text-5xl font-black leading-tight mb-6">
+              เปิดโลก
+              <span className="text-red-600"> ภาษาจีน </span>
+              กับคอร์สเรียนคุณภาพ
+            </h2>
+
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              เรียนได้ทุกที่ ทุกเวลา พร้อมวิดีโอ บทเรียน แบบฝึกหัด
+              และกลุ่มดูแลนักเรียนโดยเฉพาะ เหมาะสำหรับผู้เริ่มต้นจนถึงผู้เตรียมสอบ HSK
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg shadow-xl transition">
+                ดูคอร์สทั้งหมด
+              </button>
+
+              <button className="border border-red-600 text-red-600 hover:bg-red-50 px-8 py-4 rounded-2xl text-lg transition">
+                ทดลองเรียนฟรี
+              </button>
+            </div>
+          </div>
+
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop"
+              alt="Chinese Learning"
+              className="rounded-[32px] shadow-2xl object-cover h-[500px] w-full"
+            />
+
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-3xl p-6 shadow-2xl w-64">
+              <p className="text-3xl font-black text-red-600">5,000+</p>
+              <p className="text-gray-600 mt-2">นักเรียนที่เรียนกับเรา</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-14 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
+            <h3 className="text-4xl font-black text-red-600">50+</h3>
+            <p className="mt-2 text-gray-600">คอร์สเรียน</p>
+          </div>
+
+          <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
+            <h3 className="text-4xl font-black text-red-600">20+</h3>
+            <p className="mt-2 text-gray-600">อาจารย์ผู้สอน</p>
+          </div>
+
+          <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
+            <h3 className="text-4xl font-black text-red-600">95%</h3>
+            <p className="mt-2 text-gray-600">สอบผ่าน HSK</p>
+          </div>
+
+          <div className="bg-gray-50 rounded-3xl p-8 shadow-sm">
+            <h3 className="text-4xl font-black text-red-600">24/7</h3>
+            <p className="mt-2 text-gray-600">เรียนได้ทุกเวลา</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses */}
+      <section id="courses" className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <p className="text-red-600 font-semibold mb-3">COURSES</p>
+            <h2 className="text-4xl font-black">คอร์สยอดนิยม</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {courses.map((course, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-[28px] overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300"
+              >
+                <img
+                  src={course.image}
+                  alt={course.title}
+                  className="h-56 w-full object-cover"
+                />
+
+                <div className="p-7">
+                  <span className="bg-red-100 text-red-600 px-4 py-1 rounded-full text-sm font-semibold">
+                    {course.level}
+                  </span>
+
+                  <h3 className="text-2xl font-bold mt-5 mb-3">
+                    {course.title}
+                  </h3>
+
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {course.desc}
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <p className="text-2xl font-black text-red-600">
+                      {course.price}
+                    </p>
+
+                    <button className="bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded-xl transition">
+                      สมัคร
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+              alt="Teacher"
+              className="rounded-[32px] shadow-2xl"
+            />
+          </div>
+
+          <div>
+            <p className="text-red-600 font-semibold mb-3">ABOUT US</p>
+
+            <h2 className="text-4xl font-black mb-6 leading-tight">
+              เรียนจีนกับทีมอาจารย์มืออาชีพ
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+              เราออกแบบบทเรียนให้เข้าใจง่าย ใช้งานได้จริง และเรียนสนุก
+              พร้อมระบบติดตามผลการเรียน เพื่อช่วยให้นักเรียนพัฒนาภาษาจีนได้อย่างรวดเร็ว
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold">
+                  ✓
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">เรียนออนไลน์ย้อนหลังได้</h4>
+                  <p className="text-gray-600">
+                    ดูบทเรียนซ้ำได้ไม่จำกัด
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold">
+                  ✓
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">แบบฝึกหัดครบ</h4>
+                  <p className="text-gray-600">
+                    มีแบบทดสอบและเอกสารประกอบทุกบท
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold">
+                  ✓
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">กลุ่มดูแลนักเรียน</h4>
+                  <p className="text-gray-600">
+                    สอบถามอาจารย์ได้ตลอดเวลา
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section id="reviews" className="py-24 bg-gradient-to-br from-red-50 to-orange-50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="text-red-600 font-semibold mb-3">REVIEWS</p>
+          <h2 className="text-4xl font-black mb-14">เสียงจากนักเรียน</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {reviews.map((review, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-[28px] p-8 shadow-lg"
+              >
+                <div className="text-5xl mb-4">⭐</div>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  “{review.text}”
+                </p>
+                <h4 className="font-bold text-lg">{review.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-red-600 text-white text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-5xl font-black leading-tight mb-6">
+            เริ่มต้นเรียนภาษาจีนวันนี้
+          </h2>
+
+          <p className="text-lg text-red-100 mb-10 leading-relaxed">
+            สมัครเรียนและเปิดประสบการณ์ใหม่ในการเรียนภาษาจีนแบบออนไลน์
+            พร้อมทีมอาจารย์ดูแลอย่างใกล้ชิด
+          </p>
+
+          <button className="bg-white text-red-600 hover:bg-red-50 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl transition">
+            สมัครเรียนตอนนี้
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="contact" className="bg-gray-950 text-gray-300 py-16">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+          <div>
+            <h3 className="text-2xl font-black text-white mb-4">
+              HanYu Academy
+            </h3>
+            <p className="text-gray-400 leading-relaxed">
+              แพลตฟอร์มเรียนภาษาจีนออนไลน์สำหรับทุกระดับ
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-white font-bold mb-4">เมนู</h4>
+            <ul className="space-y-3 text-gray-400">
+              <li>คอร์สเรียน</li>
+              <li>เกี่ยวกับเรา</li>
+              <li>รีวิว</li>
+              <li>ติดต่อ</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-bold mb-4">ช่องทางติดต่อ</h4>
+            <ul className="space-y-3 text-gray-400">
+              <li>Facebook: HanYu Academy</li>
+              <li>LINE: @hanyuacademy</li>
+              <li>Tel: 099-999-9999</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-bold mb-4">สมัครรับข่าวสาร</h4>
+
+            <div className="flex flex-col gap-4">
+              <input
+                type="email"
+                placeholder="กรอกอีเมล"
+                className="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white outline-none"
+              />
+
+              <button className="bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl transition">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-14 pt-8 text-center text-gray-500 text-sm">
+          © 2026 HanYu Academy. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  );
+}
